@@ -19,7 +19,6 @@ class ApiInactiveUsers
     {
         if (Auth::user()->inactive) {
             return response('Your account is inactive', 403);
-
         }
         return $next($request);
     }
